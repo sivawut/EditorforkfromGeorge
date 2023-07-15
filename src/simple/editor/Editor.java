@@ -54,6 +54,7 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 	private void buildMenu() {
 		buildFileMenu();
 		buildEditMenu();
+		buildAboutMeMenu();
 	}
 
 	private void buildFileMenu() {
@@ -120,6 +121,15 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 		sall.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_DOWN_MASK));
 		sall.addActionListener(this);
 		edit.add(sall);
+	}
+
+	private void buildAboutMeMenu() {
+		JMenu aboutMe = new JMenu("AboutMe");
+		menu.add(aboutMe);
+		JMenuItem name = new JMenuItem("Name");
+		JMenuItem age = new JMenuItem("Age");
+		aboutMe.add(name);
+		aboutMe.add(age);
 	}
 
 	@Override
